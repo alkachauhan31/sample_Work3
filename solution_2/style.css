@@ -1,0 +1,39 @@
+*{
+			margin: 0;
+			padding: 0;
+		}
+		.product-samll-img img{
+			height: 80px;
+			width: 80px;
+			margin: 10px 0px;
+			cursor: pointer;
+			display: block;
+			opacity: 0.6;
+			border: 2px solid black;
+		}
+		.product-samll-img img:hover{
+			opacity: 1;
+
+		}
+		.product-samll-img{
+			float: left;
+		}
+		.product{
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			position: absolute;
+			border: 2PX solid black;
+			padding: 20PX;
+			background: black;
+		}
+		.img-container img{
+			height: 360px; width: 360px;
+			border: 2px solid black;
+		}
+		
+.img-container
+{
+	float: right;
+	padding: 10px;
+}

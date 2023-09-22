@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        silder
+    </title>
+    
+    <meta name="viewport"content="width=device-width, initial-scale=1">
+    <style>
+        img {
+            width: 600PX;
+            height: 500px;
+        }
+        .image-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+        .button {
+                  background-color: #4CAF50; /* Green */
+                  border: none;
+                  color: white;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                }
+        
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <div class="slide">
+            <img src="French_a.jpg">
+        </div>
+        <div class="slide">
+            <img src="daisy-flower-1532449822.jpg">
+        </div>
+
+        <div class="slide">
+            <img src="cosmos1.jpg">
+        </div>
+
+        <!-- Next and Previous icon to change images -->
+        <a onclick="moveSlides(-1)"><button class="button">PREVIOUS</button></a>
+        <a onclick="moveSlides(1)"><button class="button">NEXT</button></a> 
+    </div>
+    <br>
+
+ 
+    
+    <script>
+        var slideIndex = 1;
+        displaySlide(slideIndex);
+
+        function moveSlides(n) {
+            displaySlide(slideIndex += n);
+        }
+
+        function activeSlide(n) {
+            displaySlide(slideIndex = n);
+        }
+
+    
+        function displaySlide(n) {
+            var i;
+            var totalslides = document.getElementsByClassName("slide");
+            
+            var totaldots = document.getElementsByClassName("footerdot");
+            
+            if (n > totalslides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = totalslides.length;
+            }
+            for (i = 0; i < totalslides.length; i++) {
+                totalslides[i].style.display = "none";
+            }
+           
+            totalslides[slideIndex - 1].style.display = "block";
+           
+        }
+    </script>
+</body>
+
+</html>

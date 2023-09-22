@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>product-list</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="product">
+	<div class="product-samll-img">
+		<img src="1.jpg"  onclick="changeImage(this)">
+		<img src="2.jpg" onclick="changeImage(this)">
+		<img src="3.jpg" onclick="changeImage(this)">
+		<img src="4.jpg" onclick="changeImage(this)">
+	</div>
+		<div class="img-container">
+			<img id="img" src="1.jpg">
+		</div>
+</div>
+
+<script type="text/javascript">
+    function changeImage(a) {
+        document.getElementById("img").src=a.src;
+    }
+</script>
+</body>
+</html>
